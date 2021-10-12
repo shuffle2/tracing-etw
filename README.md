@@ -16,6 +16,8 @@ fn Event(span_id: u64, message: &str);
 
 ## Collecting a Rust ETW trace
 
+![Screenshot](https://raw.githubusercontent.com/microsoft/tracing-etw/main/imgs/screenshot.png)
+
 We are going to use [PerfView](https://github.com/microsoft/perfview) to collect a tracing-etw enabled Rust program.
 
 0. Build your app with `cargo build`. To build the example, `cargo build --example test`.
