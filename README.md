@@ -1,6 +1,6 @@
 # tracing-etw
 
-![crates.io](https://img.shields.io/crates/v/tracing-etw.svg)[https://crates.io/crates/tracing-etw]
+[![crates.io](https://img.shields.io/crates/v/tracing-etw.svg)](https://crates.io/crates/tracing-etw)
 
 Emit [ETW](https://docs.microsoft.com/en-us/windows/win32/etw/about-event-tracing) events in [tracing](https://tracing.rs)-enabled Rust applications.
 
