@@ -5,7 +5,7 @@
 //! use tracing_subscriber::{self, layer::SubscriberExt};
 //! 
 //! #[tracing::instrument]
-//! fn blah() {
+//! fn example() {
 //!     for i in 0..10 {
 //!         info!("{}", i);
 //!     }
@@ -17,7 +17,7 @@
 //!     )
 //!     .expect("setup the subscriber");
 //! 
-//!     blah();
+//!     example();
 //! }
 //! ```
 //! 
@@ -56,8 +56,6 @@ pub trait TracingProvider {
 }
 
 /// A tracing layer that collects data in ETW profiling format.
-/// 
-/// 
 pub struct EtwLayer {
     enable_instrumentation: bool,
     etw_events: TracingProvider,
@@ -65,6 +63,8 @@ pub struct EtwLayer {
 
 impl EtwLayer {
     /// Create a new `EtwLayer`.
+    /// 
+    /// enable_instrumentation configures whether it emits span enter/exit ETW events
     pub fn new(enable_instrumentation: bool) -> Self {
         Self {
             enable_instrumentation,
