@@ -25,7 +25,3 @@ tokio = { version = "0.2", features = ["full"] }
 tracing-attributes =  { version = "0.1"}
 tracing-futures = { version = "0.2" }
 futures = "0.3"
-
-[features]
-default = [ "enable" ]
-enable = []
