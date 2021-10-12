@@ -1,0 +1,31 @@
+[package]
+name = "tracing-etw"
+version = "0.1.0"
+authors = ["Ricky Han <liha@microsoft.com>"]
+license = "MIT/Apache-2.0"
+edition = "2021"
+readme = "./README.md"
+repository = "https://github.com/microsoft/tracing-etw"
+homepage = "https://github.com/microsoft/tracing-etw"
+description = "ETW support for tracing"
+categories = [
+    "development-tools::debugging",
+    "development-tools::profiling",
+]
+
+[dependencies]
+tracing-core = { version = "0.1", default-features = false, features = ["std"] }
+tracing-subscriber = { version = "0.2", default-features = false, features = ["fmt", "registry"] }
+win_etw_macros = "0.1.*"
+win_etw_provider = "0.1.*"
+
+[dev-dependencies]
+tracing = { version = "0.1" }
+tokio = { version = "0.2", features = ["full"] }
+tracing-attributes =  { version = "0.1"}
+tracing-futures = { version = "0.2" }
+futures = "0.3"
+
+[features]
+default = [ "enable" ]
+enable = []
